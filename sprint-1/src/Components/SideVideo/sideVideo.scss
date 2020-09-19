@@ -1,0 +1,10 @@
+.side-container {
+  &__sub-container {
+    display: flex;
+  }
+  &__video {
+    border-radius: 6px;
+    width: 120px;
+    height: 70px;
+  }
+}

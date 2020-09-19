@@ -1,7 +1,48 @@
 .form-container {
+  margin: 16px;
+  display: flex;
+  flex-direction: column;
+  &__slogan {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0 8px 26px;
+    font-weight: 700;
+    color: #afafaf;
+    font-size: 15px;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+  &__comments-count {
+    font-weight: 700;
+  }
+  &__image-text-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
   &__image {
     width: 45px;
     height: 45px;
     border-radius: 25px;
+    margin: 0 15px 0 0;
+  }
+  &__text-area {
+    border-radius: 4px;
+    border: 1px solid #afafaf;
+    width: 73vw;
+    height: 101px;
+  }
+  &__button {
+    align-self: flex-end;
+    margin: 16px 0 0 0;
+    height: 50px;
+    width: 71.4vw;
+    border-radius: 4px;
+    border: 0;
+    background-color: #0095ff;
+    color: #fafafa;
+    font-weight: 700;
   }
 }

@@ -1,10 +1,18 @@
 import React from "react";
 import Header from "./Components/Header/Header";
 import Main from "./Components/Main/Main";
-import Form from "./Components/Form/Form";
+import VideoOne from "./assets/Images/video-list-1.jpg";
+import VideoTwo from "./assets/Images/video-list-2.jpg";
+import VideoThree from "./assets/Images/video-list-3.jpg";
+import VideoFour from "./assets/Images/video-list-4.jpg";
+import VideoFive from "./assets/Images/video-list-5.jpg";
+import VideoSix from "./assets/Images/video-list-6.jpg";
+import VideoSeven from "./assets/Images/video-list-7.jpg";
+import VideoEight from "./assets/Images/video-list-8.jpg";
 
 class App extends React.Component {
   state = {
+    // comments array
     comments: [
       {
         id: 1,
@@ -28,8 +36,61 @@ class App extends React.Component {
           "How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!",
       },
     ],
+
+    // side video array
+    sideVideo: [
+      {
+        id: 1,
+        title: "Become A Travel Pro In One Easy Lesson...",
+        channel: "Scotty Cranmer",
+        image: VideoOne,
+      },
+      {
+        id: 2,
+        title: "Les Houches The Hidden Gem Of The...",
+        channel: "Scotty Cranmer",
+        image: VideoTwo,
+      },
+      {
+        id: 3,
+        title: "Travel Health Useful Medical Information...",
+        channel: "Scotty Cranmer",
+        image: VideoThree,
+      },
+      {
+        id: 4,
+        title: "Cheap Airline Tickets Great Ways To Save",
+        channel: "Emily Harper",
+        image: VideoFour,
+      },
+      {
+        id: 5,
+        title: "Take A Romantic Break In A Boutique Hotel",
+        channel: "Ethan Owen",
+        image: VideoFive,
+      },
+      {
+        id: 6,
+        title: "Choose The Perfect Accommodations.",
+        channel: "Lydia Perez",
+        image: VideoSix,
+      },
+      {
+        id: 7,
+        title: "Cruising Destination Ideas",
+        channel: "Timothy Austin",
+        image: VideoSeven,
+      },
+      {
+        id: 8,
+        title: "Train Travel On Track For Safety",
+        channel: "Scotty Cranmer",
+        image: VideoEight,
+      },
+    ],
   };
 
+  // add comment function
   addComment = (newComment) => {
     console.log(newComment);
     this.setState({ comments: [...this.state.comments, newComment] });
@@ -39,29 +100,11 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header />
-        <Main />
-        <Form addComment={this.addComment} />
-        <div>
-          {this.state.comments.reverse().map((item) => {
-            return (
-              <div>
-                <hr></hr>
-                <div>
-                  <div></div>
-                </div>
-                <div>
-                  <div>
-                    <p>{item.name}</p>
-                  </div>
-                  <div>
-                    <p>{item.date}</p>
-                  </div>
-                </div>
-                <p>{item.comment}</p>
-              </div>
-            );
-          })}
-        </div>
+        <Main
+          addComment={this.addComment}
+          comments={this.state.comments}
+          sideVideo={this.state.sideVideo}
+        />
       </div>
     );
   }

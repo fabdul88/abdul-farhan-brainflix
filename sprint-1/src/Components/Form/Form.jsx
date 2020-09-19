@@ -27,17 +27,19 @@ function Form({ addComment }) {
           <span className="form-container__comment--state">3</span>Comments
         </p>
         <p className="form-container__slogan">JOIN THE CONVERSATION</p>
-        <input
-          className="form-container__image"
-          type="image"
-          src={ProfileImage}
-          alt="Form Profile img"
-        />
-        <input
-          className="form-container__text-area"
-          type="textarea"
-          name="comment"
-        />
+        <div className="form-container__image-text-container">
+          <input
+            className="form-container__image"
+            type="image"
+            src={ProfileImage}
+            alt="Form Profile img"
+          />
+          <input
+            className="form-container__text-area"
+            type="textarea"
+            name="comment"
+          />
+        </div>
         <button className="form-container__button">COMMENT</button>
       </form>
     </div>
