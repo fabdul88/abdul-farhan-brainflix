@@ -1,7 +1,12 @@
+@import "../../styles//partials/mediaQuery";
+
 .form-container {
   margin: 16px;
   display: flex;
   flex-direction: column;
+  @include tablet {
+    margin: 24px;
+  }
   &__slogan {
     display: flex;
     justify-content: center;
@@ -9,18 +14,25 @@
     font-weight: 700;
     color: #afafaf;
     font-size: 15px;
+    @include tablet {
+      justify-content: flex-start;
+      margin: 0 0 0 84px;
+    }
   }
   &__form {
     display: flex;
     flex-direction: column;
-  }
-  &__comments-count {
-    font-weight: 700;
+    @include tablet {
+      flex-direction: row;
+    }
   }
   &__image-text-container {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    @include tablet {
+      justify-content: flex-start;
+    }
   }
   &__image {
     width: 45px;
@@ -32,7 +44,11 @@
     border-radius: 4px;
     border: 1px solid #afafaf;
     width: 73vw;
-    height: 101px;
+    height: 31.5625vw;
+    @include tablet {
+      height: 48px;
+      width: 65.2916vw;
+    }
   }
   &__button {
     align-self: flex-end;
@@ -44,5 +60,10 @@
     background-color: #0095ff;
     color: #fafafa;
     font-weight: 700;
+    @include tablet {
+      height: 48px;
+      margin: 2px 10px;
+      width: 20.833vw;
+    }
   }
 }

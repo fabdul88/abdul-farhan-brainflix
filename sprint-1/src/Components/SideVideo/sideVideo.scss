@@ -1,10 +1,40 @@
+@import "../../styles//partials/mediaQuery";
+
 .side-container {
-  &__sub-container {
-    display: flex;
+  margin: 0 16px;
+  @include tablet {
+    margin: 0 24px;
   }
-  &__video {
+  &__video-title-channel-container {
+    display: flex;
+    align-items: center;
+  }
+  &__title-channel-container {
+    @include tablet {
+      box-sizing: border-box;
+      width: 160px;
+    }
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  &__sub {
+    width: 100%;
+    margin: 0 0 24px 0;
+  }
+  &__video-image {
     border-radius: 6px;
-    width: 120px;
-    height: 70px;
+    width: 37.5vw;
+    height: 21.875vw;
+    margin: 0 16px 0 0;
+    @include tablet {
+      width: 15.625vw;
+      height: 9.11458vw;
+    }
+  }
+  &__channel {
+    font-size: 14px;
   }
 }

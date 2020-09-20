@@ -1,47 +1,232 @@
+@import "../../styles//partials//mediaQuery";
+
 .video-container {
+  &__sub {
+    position: relative;
+    @include tablet {
+      display: flex;
+      align-items: center;
+      background-color: #000;
+      height: 50.9114vw;
+    }
+  }
   &__video {
-    width: 100%;
-    height: 183px;
+    width: 100vw;
+    height: 57.1875vw;
+    @include tablet {
+      // margin: 0 3.90625vw;
+      height: 51vw;
+    }
   }
   &__heading {
     margin: 25px 16px 0;
     font-size: 1.5em;
     line-height: 32px;
     font-weight: 900;
+    @include tablet {
+      margin: 48px 24px 0;
+      font-size: 36px;
+      line-height: 44px;
+    }
   }
   &__author-container {
     display: flex;
     align-items: center;
     margin: 0 16px;
+    @include tablet {
+      margin: 0;
+    }
   }
   &__author {
-    font-size: 19px;
+    font-size: 17px;
     font-weight: 700;
   }
   &__author-date {
+    font-size: 15px;
     color: #afafaf;
     margin: 0 0 0 8px;
   }
   &__views-likes-container {
     display: flex;
     margin: 0 16px;
+    @include tablet {
+      margin: 0;
+    }
   }
   &__views-container {
     display: flex;
+    @include tablet {
+      align-items: center;
+    }
   }
   &__views-count {
+    font-size: 15px;
     margin: 0 0 0 8px;
   }
   &__likes-container {
     display: flex;
     margin: 0 0 0 39px;
+    @include tablet {
+      align-items: center;
+      margin: 0 0 0 24px;
+    }
   }
   &__likes-count {
+    font-size: 15px;
     margin: 0 0 0 8px;
   }
   &__hr {
     width: 90vw;
     border: 1px solid #e1e1e1;
     margin: 24px 16px;
+    @include tablet {
+      width: 93.75vw;
+      margin: 24px 24px 40px;
+    }
+  }
+  &__description {
+    font-size: 14px;
+    line-height: 22px;
+    margin: 0 16px;
+    display: flex;
+    @include tablet {
+      margin: 0 24px;
+      box-sizing: border-box;
+      width: 67vw;
+    }
+  }
+  &__comments-count {
+    margin: 16px 16px;
+    font-weight: 700;
+    @include tablet {
+      margin: 54px 24px 32px;
+    }
+  }
+  &__play-container {
+    position: absolute;
+    display: flex;
+    top: 40.9375vw;
+    right: 78.4375vw;
+    left: 5vw;
+    height: 32px;
+    @include tablet {
+      left: 5.729vw;
+      bottom: 0;
+      top: 42.838vw;
+    }
+  }
+  &__play-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 0;
+    border-radius: 4px;
+    padding: 9px;
+    height: 12.5vw;
+    width: 16.25vw;
+    @include tablet {
+      height: 5.2083vw;
+      width: 7.8125vw;
+    }
+  }
+  &__play-image {
+    height: 5vw;
+    @include tablet {
+      height: 2.4739vw;
+    }
+  }
+  &__scrubber-button {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    border-radius: 4px;
+    width: 40.3125vw;
+    height: 12.5vw;
+    top: 40.9375vw;
+    right: 21.875vw;
+    left: 25.3125vw;
+    background-color: rgba(0, 0, 0, 0.55);
+    @include tablet {
+      justify-content: flex-start;
+      top: 42.838vw;
+      right: 19.921vw;
+      left: 15.625vw;
+      height: 5.2083vw;
+      width: 66vw;
+    }
+  }
+  &__scrubber-bar {
+    border-radius: 4px;
+    height: 4px;
+    width: 31.4062vw;
+    background-color: #000;
+    @include tablet {
+      width: 53vw;
+      margin: 0 2.604vw;
+    }
+  }
+  &__scrubber-time {
+    display: none;
+    @include tablet {
+      display: flex;
+      color: #fafafa;
+      width: 80px;
+    }
+  }
+  &__fullscreen-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 40.9375vw;
+    left: 63.4375vw;
+    right: 0;
+    @include tablet {
+      top: 42.838vw;
+      right: 0;
+      left: 78.125vw;
+    }
+  }
+  &__fullscreen-button {
+    width: 12.5vw;
+    height: 12.8124vw;
+    border-radius: 4px 0 0 4px;
+    border: 0;
+    padding: 7px;
+    background-color: rgba(0, 0, 0, 0.5);
+    @include tablet {
+      width: 5.2083vw;
+      height: 5.2083vw;
+    }
+  }
+  &__fullscreen-image {
+    height: 5.625vw;
+    @include tablet {
+      height: 2.4739vw;
+    }
+  }
+  &__volume-image {
+    height: 5.625vw;
+    @include tablet {
+      height: 2.4739vw;
+    }
+  }
+  &__volume-button {
+    width: 12.5vw;
+    height: 12.8124vw;
+    border-radius: 0 4px 4px 0;
+    border: 0;
+    padding: 7px;
+    background-color: rgba(0, 0, 0, 0.5);
+    @include tablet {
+      width: 5.2083vw;
+      height: 5.2083vw;
+    }
+  }
+  &__status {
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      margin: 24px;
+    }
   }
 }

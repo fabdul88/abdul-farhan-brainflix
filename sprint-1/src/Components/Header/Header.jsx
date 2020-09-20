@@ -2,6 +2,7 @@ import React from "react";
 import "./header.scss";
 import Logo from "../../assets/Logo/Logo-brainflix.svg";
 import HeaderButton from "../HeaderButton/HeaderButton";
+import "../../styles/partials/_mediaQuery.scss";
 
 const Header = () => {
   return (

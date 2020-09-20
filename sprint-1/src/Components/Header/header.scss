@@ -1,4 +1,5 @@
 @import "../../styles/partials/_fonts";
+@import "../../styles/partials/mediaQuery";
 
 .nav {
   display: flex;
@@ -6,20 +7,37 @@
   align-items: center;
   height: 160px;
   margin: 0 16px;
+  @include tablet {
+    flex-direction: row;
+    align-items: baseline;
+    height: 80px;
+    margin: 20px 24px 0;
+    justify-content: space-between;
+  }
   &__logo-container {
     display: flex;
     align-items: center;
     height: 48px;
+    @include tablet {
+      align-self: center;
+      margin: 0 140px 0 0;
+    }
   }
   &__logo {
     height: 26px;
+    @include tablet {
+      align-self: baseline;
+    }
   }
   &__search-container {
-    width: 288px;
+    width: 90vw;
     height: 45px;
+    @include tablet {
+      width: 31vw;
+    }
   }
   &__search {
-    width: 288px;
+    width: 90vw;
     height: 45px;
     border: 1px solid #afafaf;
     border-radius: 4px;
@@ -27,12 +45,18 @@
     background-repeat: no-repeat;
     background-position: 10px 10px;
     padding: 12px 20px 12px 40px;
+    @include tablet {
+      width: 32vw;
+    }
   }
   &__button-image-container {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 90vw;
     height: 48px;
+    @include tablet {
+      width: 26vw;
+    }
   }
   &__button {
     font-family: "Avenir";
@@ -40,12 +64,16 @@
     font-style: normal;
     font-size: 1rem;
     height: 45px;
-    width: 80%;
+    width: 73vw;
     margin: 8px 0 0 0;
     border: 0;
     border-radius: 4px;
     background-color: #0095ff;
     color: #fafafa;
+    @include tablet {
+      margin: 8px 0 0 24px;
+      width: 15.755vw;
+    }
   }
   &__button-image {
     margin-right: 0.6em;

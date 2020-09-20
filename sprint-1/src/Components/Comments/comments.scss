@@ -1,23 +1,50 @@
+@import "../../styles/partials/mediaQuery";
 .comments-container {
   display: flex;
   margin: 0 16px;
+  @include tablet {
+    margin: 0 24px;
+  }
+  &__grey-image-container {
+    margin: 0 11px 0 0;
+  }
   &__grey-image {
     width: 48px;
     height: 48px;
     background-color: #afafaf;
     border-radius: 24px;
+    margin: 17px 0 0 0;
   }
   &__name-date-container {
     display: flex;
     justify-content: space-between;
+    @include tablet {
+      justify-content: flex-start;
+    }
   }
   &__name {
     font-weight: 700;
   }
   &__date {
     color: #afafaf;
+    @include tablet {
+      margin: 0 16px;
+    }
+  }
+  &__comment {
+    font-size: 14px;
+    line-height: 22px;
+    margin: 0 0 16px 0;
+    @include tablet {
+      box-sizing: border-box;
+      width: 81.25vw;
+    }
   }
   &__hr {
-    width: 288px;
+    width: 90vw;
+    border: 1px solid #e1e1e1;
+    @include tablet {
+      width: 93.75vw;
+    }
   }
 }
