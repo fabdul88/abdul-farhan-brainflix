@@ -5,57 +5,72 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 160px;
-  margin: 0 16px;
+  height: 10rem;
+  margin: 0 1rem;
   @include tablet {
     flex-direction: row;
     align-items: baseline;
-    height: 80px;
-    margin: 20px 24px 0;
+    height: 5rem;
+    margin: 1.25rem 1.5rem 0;
     justify-content: space-between;
+  }
+  @include desktop {
+    width: 87vw;
   }
   &__logo-container {
     display: flex;
     align-items: center;
-    height: 48px;
+    height: 3rem;
     @include tablet {
       align-self: center;
-      margin: 0 140px 0 0;
+      margin: 0 8.75rem 0 0;
+    }
+    @include desktop {
+      width: 35vw;
     }
   }
   &__logo {
-    height: 26px;
+    height: 1.625rem;
     @include tablet {
       align-self: baseline;
+    }
+    @include desktop {
+      margin: 0 22.0625rem 0 6.3125rem;
     }
   }
   &__search-container {
     width: 90vw;
-    height: 45px;
+    height: 2.8125rem;
     @include tablet {
       width: 31vw;
     }
   }
   &__search {
     width: 90vw;
-    height: 45px;
+    height: 2.8125rem;
     border: 1px solid #afafaf;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     background-image: url("../../assets/Icons/SVG/Icon-search.svg");
     background-repeat: no-repeat;
-    background-position: 10px 10px;
-    padding: 12px 20px 12px 40px;
+    background-position: 0.625rem 0.625rem;
+    padding: 0.75rem 1.25rem 0.75rem 2.5rem;
     @include tablet {
       width: 32vw;
+    }
+    @include desktop {
+      width: 23vw;
     }
   }
   &__button-image-container {
     display: flex;
     justify-content: space-between;
     width: 90vw;
-    height: 48px;
+    height: 3rem;
     @include tablet {
       width: 26vw;
+    }
+    @include desktop {
+      width: 23vw;
     }
   }
   &__button {
@@ -63,25 +78,34 @@
     font-weight: 700;
     font-style: normal;
     font-size: 1rem;
-    height: 45px;
+    height: 2.8125rem;
     width: 73vw;
-    margin: 8px 0 0 0;
+    margin: 0.5rem 0 0 0;
     border: 0;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     background-color: #0095ff;
     color: #fafafa;
     @include tablet {
-      margin: 8px 0 0 24px;
+      margin: 0.5rem 0 0 1.5rem;
       width: 15.755vw;
     }
+    @include desktop {
+      width: 9vw;
+    }
+  }
+  &__button:hover {
+    background-color: #0065ad;
+    transition: 0.2s;
+    border: 0;
+    cursor: pointer;
   }
   &__button-image {
-    margin-right: 0.6em;
+    margin-right: 0.6rem;
   }
   &__image {
-    margin: 8px 0 0 0;
-    width: 45px;
-    height: 45px;
-    border-radius: 25px;
+    margin: 0.5rem 0 0 0;
+    width: 2.8125rem;
+    height: 2.8125rem;
+    border-radius: 1.5625rem;
   }
 }

@@ -1,22 +1,28 @@
 @import "../../styles//partials/mediaQuery";
 
 .form-container {
-  margin: 16px;
+  margin: 1rem;
   display: flex;
   flex-direction: column;
   @include tablet {
-    margin: 24px;
+    margin: 1.5rem;
+  }
+  @include desktop {
+    margin-left: 6.3125rem;
   }
   &__slogan {
     display: flex;
     justify-content: center;
-    margin: 16px 0 8px 26px;
+    margin: 1rem 0 0.5rem 1.625rem;
     font-weight: 700;
     color: #afafaf;
-    font-size: 15px;
+    font-size: 0.9375rem;
     @include tablet {
       justify-content: flex-start;
-      margin: 0 0 0 84px;
+      margin: 0 0 0 5.25rem;
+    }
+    @include desktop {
+      margin-left: 10.25rem;
     }
   }
   &__form {
@@ -35,35 +41,44 @@
     }
   }
   &__image {
-    width: 45px;
-    height: 45px;
-    border-radius: 25px;
-    margin: 0 15px 0 0;
+    width: 2.8125rem;
+    height: 2.8125rem;
+    border-radius: 1.5625rem;
+    margin: 0 0.9375rem 0 0;
   }
   &__text-area {
-    border-radius: 4px;
+    border-radius: 0.25rem;
     border: 1px solid #afafaf;
     width: 73vw;
     height: 31.5625vw;
     @include tablet {
-      height: 48px;
+      height: 3rem;
       width: 65.2916vw;
+    }
+    @include desktop {
+      width: 29vw;
     }
   }
   &__button {
     align-self: flex-end;
-    margin: 16px 0 0 0;
-    height: 50px;
+    margin: 1rem 0 0 0;
+    height: 3.125rem;
     width: 71.4vw;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     border: 0;
     background-color: #0095ff;
     color: #fafafa;
     font-weight: 700;
     @include tablet {
-      height: 48px;
-      margin: 2px 10px;
+      height: 3rem;
+      margin: 0.125rem 0.625rem;
       width: 20.833vw;
     }
+  }
+  &__button:hover {
+    background-color: #0065ad;
+    transition: 0.2s;
+    border: 0;
+    cursor: pointer;
   }
 }

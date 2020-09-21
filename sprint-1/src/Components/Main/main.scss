@@ -1,7 +1,22 @@
 @import "../../styles/partials/_fonts";
+@import "../../styles/partials/mediaQuery";
+@import "../../styles/partials/globalFontColor";
 
 main {
   font-family: "Avenir";
   font-style: normal;
-  color: #323232;
+  color: $color;
+}
+
+.section-container {
+  @include desktop {
+    display: flex;
+  }
+  &__left {
+    @include desktop {
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+    }
+  }
 }

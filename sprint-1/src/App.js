@@ -25,10 +25,10 @@ class App extends React.Component {
         image: Video,
         views: "1,001,023",
         likes: "110,985",
-        // duration: "type of <string>",
-        // video: "type of <string>",
+        duration: "",
+        video: "",
         timestamp: "12/18/2018",
-        comments: "3 Comments",
+        comments: "3 comments",
       },
     ],
 
