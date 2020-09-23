@@ -1,0 +1,23 @@
+@import "../../styles/partials/_fonts";
+@import "../../styles/partials/mediaQuery";
+@import "../../styles/partials/globalFontColor";
+
+main {
+  font-family: "Avenir";
+  font-style: normal;
+  color: $color;
+}
+
+.section-container {
+  @include desktop {
+    display: flex;
+  }
+  &__left {
+    @include desktop {
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+      border-right: 2px solid #e1e1e1;
+    }
+  }
+}

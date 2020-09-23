@@ -1,0 +1,28 @@
+@import "../../styles/partials/mediaQuery";
+
+.next-video-container {
+  margin: 0 1rem;
+  @include tablet {
+    margin: 0;
+  }
+  &__next {
+    margin: 2.5rem 1rem 2.5rem 0;
+    font-weight: 700;
+    color: #afafaf;
+    @include tablet {
+      margin: 2.5rem 1.5rem;
+    }
+    @include desktop {
+      margin: 2.5rem 1.5rem 0.625rem;
+    }
+  }
+  &__hr {
+    width: 90vw;
+    border: 1px solid #e1e1e1;
+  }
+  &__hr-hide {
+    @include desktop {
+      display: none;
+    }
+  }
+}
