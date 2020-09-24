@@ -1,0 +1,120 @@
+@import "../../styles/partials/mediaQuery";
+
+.upload-video-container {
+  margin: 1rem;
+  &__upload-title {
+    font-weight: 900;
+  }
+  &__form-container {
+    @include desktop {
+      display: flex;
+    }
+  }
+  &__video-heading {
+    color: #afafaf;
+    font-size: 0.875rem;
+    @include tablet {
+      margin: 2.5rem 0 0.3125rem 0;
+    }
+  }
+  &__image {
+    width: 90vw;
+    height: 47.8125vw;
+    border-radius: 0.25rem;
+    @include tablet {
+      width: 44.791vw;
+      height: 23.828vw;
+    }
+    @include desktop {
+      margin: 0 24px 0 0;
+      width: 344px;
+      height: 183px;
+    }
+  }
+  &__title {
+    color: #afafaf;
+    font-size: 0.875rem;
+    @include tablet {
+      margin: 40px 0 5px 0;
+    }
+  }
+  &__text {
+    width: 88vw;
+    height: 3.125rem;
+    border-radius: 0.25rem;
+    border: 1px solid #afafaf;
+    @include desktop {
+      width: 55vw;
+    }
+  }
+  &__description {
+    font-size: 0.875rem;
+    color: #afafaf;
+    @include tablet {
+      margin: 1.5rem 0 0.3125rem 0;
+    }
+  }
+  &__textbox {
+    width: 88vw;
+    height: 11.25rem;
+    border-radius: 0.25rem;
+    border: 1px solid #afafaf;
+    @include desktop {
+      width: 55vw;
+      height: 78px;
+    }
+  }
+  &__buttons-container {
+    display: flex;
+    flex-direction: column-reverse;
+    @include tablet {
+      flex-direction: row;
+      justify-content: flex-end;
+      margin: 0 7.682vw;
+      @include desktop {
+        margin: 0 11.3vw;
+      }
+    }
+  }
+  &__cancel-button {
+    margin: 1.5rem 0 0 0;
+    width: 90vw;
+    height: 3.125rem;
+    border-radius: 0.25rem;
+    background-color: #ffffff;
+    border: 0;
+    color: #0095ff;
+    font-size: 20px;
+    font-weight: 700;
+    @include tablet {
+      width: 160px;
+      margin: 40px 0 0 0;
+    }
+  }
+  &__publish-button {
+    margin: 32px 0 0 0;
+    width: 90vw;
+    height: 3.125rem;
+    border-radius: 0.25rem;
+    background-color: #0095ff;
+    border: 0;
+    color: #fafafa;
+    font-size: 20px;
+    font-weight: 700;
+    @include tablet {
+      width: 160px;
+      margin: 40px 0 0 0;
+    }
+  }
+
+  &__publish-button:hover {
+    background-color: #0065ad;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+  &__cancel-button:hover {
+    border: 1px solid #0065ad;
+    color: #0065ad;
+    transition: 0.2s;
+  }
+}

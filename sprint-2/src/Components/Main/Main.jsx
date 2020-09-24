@@ -30,7 +30,7 @@ class Main extends React.Component {
                   key={item.id}
                   item={item}
                   name={item.name}
-                  date={item.date}
+                  date={item.timestamp}
                   comment={item.comment}
                 />
               );

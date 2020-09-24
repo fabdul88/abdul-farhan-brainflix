@@ -15,7 +15,7 @@ function Comments(props) {
               <p className="comments-container__name">{props.name}</p>
             </div>
             <div className="comments-container__date">
-              <p>{props.date}</p>
+              <p>{props.timestamp}</p>
             </div>
           </div>
           <p className="comments-container__comment">{props.comment}</p>
