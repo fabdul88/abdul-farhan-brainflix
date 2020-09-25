@@ -10,7 +10,6 @@ import "../../styles/partials/_mediaQuery.scss";
 
 class Main extends React.Component {
   render() {
-    console.log(this.props);
     return (
       <main>
         <VideoSection item={this.props.mainVideo} />
@@ -26,7 +25,6 @@ class Main extends React.Component {
                 return (
                   <Comments
                     key={item.id}
-                    item={item}
                     name={item.name}
                     date={item.timestamp}
                     comment={item.comment}

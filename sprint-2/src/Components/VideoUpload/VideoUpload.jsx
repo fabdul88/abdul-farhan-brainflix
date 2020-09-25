@@ -1,6 +1,6 @@
 import React from "react";
 import UploadVideoThumbnail from "../../assets/Images/Upload-video-preview.jpg";
-import "./uploadVideo.scss";
+import "./videoUpload.scss";
 
 export default function UploadVideo() {
   return (

@@ -1,7 +1,9 @@
 import React from "react";
+import axios from "axios";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./Components/Header/Header";
 import Main from "./Components/Main/Main";
-import axios from "axios";
+import videoUpload from "./Components/VideoUpload/VideoUpload";
 
 class App extends React.Component {
   state = {
@@ -15,7 +17,6 @@ class App extends React.Component {
   };
 
   componentDidMount() {
-    console.log("This is a test");
     axios
       .get(
         `https://project-2-api.herokuapp.com/videos/1af0jruup5gu/?api_key=72b974e2-f5dd-40de-b24f-495ef6511f0c`
@@ -46,13 +47,20 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        <Header />
-        <Main
-          mainVideo={this.state.mainVideo}
-          sideVideo={this.state.sideVideo}
-        />
-      </div>
+      <Router>
+        <div className="App">
+          <Header />
+          <Switch>
+            <Route exact path="/">
+              <Main
+                mainVideo={this.state.mainVideo}
+                sideVideo={this.state.sideVideo}
+              />
+            </Route>
+            <Route path="/videoupload" component={videoUpload} />
+          </Switch>
+        </div>
+      </Router>
     );
   }
 }
