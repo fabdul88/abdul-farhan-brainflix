@@ -10,36 +10,33 @@ import "../../styles/partials/_mediaQuery.scss";
 
 class Main extends React.Component {
   render() {
+    console.log(this.props);
     return (
       <main>
-        {this.props.mainVideo.map((item) => (
-          <VideoSection key={item.id} item={item} />
-        ))}
+        <VideoSection item={this.props.mainVideo} />
+
         <section className="section-container">
           <section className="section-container__left">
-            {this.props.mainVideo.map((item) => (
-              <VideoInfo key={item.id} item={item} />
-            ))}
+            <VideoInfo item={this.props.mainVideo} />
 
             <Form />
 
-            {/* create comments elements */}
-            {this.props.mainVideo[0].comments.map((item) => {
-              return (
-                <Comments
-                  key={item.id}
-                  item={item}
-                  name={item.name}
-                  date={item.timestamp}
-                  comment={item.comment}
-                />
-              );
-            })}
+            {this.props.mainVideo.comments &&
+              this.props.mainVideo.comments.map((item) => {
+                return (
+                  <Comments
+                    key={item.id}
+                    item={item}
+                    name={item.name}
+                    date={item.timestamp}
+                    comment={item.comment}
+                  />
+                );
+              })}
           </section>
           <section className="section-container__right">
             <NextVideo />
             <div className="side-container">
-              {/* create side Video elements */}
               {this.props.sideVideo.map((item) => (
                 <SideVideo key={item.id} item={item} />
               ))}
