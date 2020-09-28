@@ -1,0 +1,16 @@
+@import "../../styles/partials/fonts";
+
+.error {
+  font-size: "Avenir";
+  display: flex;
+  justify-content: center;
+  &__text {
+    margin-top: 50px;
+    color: #afafaf;
+    font-size: 6.25vw;
+  }
+  &__image {
+    width: 29vw;
+    height: 33.625vw;
+  }
+}

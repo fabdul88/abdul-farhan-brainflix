@@ -18,8 +18,6 @@ class Header extends React.Component {
                 alt="Navigation brainflix Logo"
               />
             </Link>
-            {/* <a className="nav__logo-link" href="../../Index.js">
-            </a> */}
           </div>
           <div className="nav__search-container">
             <input className="nav__search" type="search" placeholder="Search" />

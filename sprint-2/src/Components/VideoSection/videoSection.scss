@@ -1,4 +1,4 @@
-@import "../../styles//partials//mediaQuery";
+@import "../../styles/partials/mediaQuery";
 
 .video-container {
   &__sub {
@@ -10,7 +10,7 @@
       height: 50.9114vw;
     }
     @include desktop {
-      height: 37.583vw;
+      height: 38.4vw;
     }
   }
   &__video {

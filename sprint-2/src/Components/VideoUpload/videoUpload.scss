@@ -1,7 +1,16 @@
 @import "../../styles/partials/mediaQuery";
+@import "../../styles/partials/fonts";
 
 .upload-video-container {
+  font-family: Avenir;
+  color: #323232;
   margin: 1rem;
+  @include tablet {
+    margin: 1.5rem;
+  }
+  @include desktop {
+    margin: 0 180px;
+  }
   &__upload-title {
     font-weight: 900;
   }
@@ -44,7 +53,7 @@
     border-radius: 0.25rem;
     border: 1px solid #afafaf;
     @include desktop {
-      width: 55vw;
+      width: 42.8vw;
     }
   }
   &__description {
@@ -60,7 +69,7 @@
     border-radius: 0.25rem;
     border: 1px solid #afafaf;
     @include desktop {
-      width: 55vw;
+      width: 42.8vw;
       height: 78px;
     }
   }
@@ -72,7 +81,7 @@
       justify-content: flex-end;
       margin: 0 7.682vw;
       @include desktop {
-        margin: 0 11.3vw;
+        width: 49.75rem;
       }
     }
   }
@@ -88,7 +97,7 @@
     font-weight: 700;
     @include tablet {
       width: 160px;
-      margin: 40px 0 0 0;
+      margin: 40px 0.625rem 0 0;
     }
   }
   &__publish-button {
@@ -116,5 +125,25 @@
     border: 1px solid #0065ad;
     color: #0065ad;
     transition: 0.2s;
+  }
+  &__hr {
+    display: none;
+    @include tablet {
+      display: flex;
+    }
+  }
+  &__hr-top {
+    display: flex;
+    border: 1px solid #e1e1e1;
+  }
+  &__hr-center {
+    display: none;
+    border: 1px solid #e1e1e1;
+    @include tablet {
+      display: flex;
+    }
+    @include desktop {
+      display: flex;
+    }
   }
 }

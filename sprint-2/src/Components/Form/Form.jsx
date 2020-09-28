@@ -15,11 +15,11 @@ function Form() {
               src={ProfileImage}
               alt="Form Profile img"
             />
-            <input
+            <textarea
               className="form-container__text-area"
               type="textarea"
               name="comment"
-            />
+            ></textarea>
           </div>
           <button className="form-container__button">COMMENT</button>
         </form>
