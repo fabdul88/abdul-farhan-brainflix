@@ -9,6 +9,15 @@
   &__video-title-channel-container {
     display: flex;
     align-items: center;
+    padding: 5px;
+  }
+  &__video-title-channel-container:hover {
+    transition: 0.5s;
+    box-shadow: 0px 0px 30px 5px #0065ad;
+    background-color: #e1e1e1;
+    color: #0065ad;
+    border-radius: 4px;
+    padding: 5px;
   }
   &__title-channel-container {
     @include tablet {
@@ -39,11 +48,11 @@
       height: 5.833vw;
     }
   }
-  &__video-image:hover {
-    transition: 0.4s;
-    box-shadow: 2px 3px 3px 3px rgba(0, 0, 0, 0.3);
-  }
   &__channel {
     font-size: 0.875rem;
+  }
+  &__dom-link {
+    text-decoration: none;
+    color: black;
   }
 }

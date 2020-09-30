@@ -5,7 +5,10 @@ import { Link } from "react-router-dom";
 class SideVideo extends React.Component {
   render() {
     return (
-      <Link to={`/video/${this.props.itemId}`}>
+      <Link
+        className="side-container__dom-link"
+        to={`/video/${this.props.itemId}`}
+      >
         <section className="side-container__section">
           <aside className="side-container__sub">
             <div className="side-container__video-title-channel-container">

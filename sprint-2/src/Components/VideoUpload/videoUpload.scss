@@ -9,7 +9,7 @@
     margin: 1.5rem;
   }
   @include desktop {
-    margin: 0 180px;
+    margin: 0 7.8125rem;
   }
   &__upload-title {
     font-weight: 900;
@@ -52,8 +52,11 @@
     height: 3.125rem;
     border-radius: 0.25rem;
     border: 1px solid #afafaf;
+    @include tablet {
+      width: 92.8vw;
+    }
     @include desktop {
-      width: 42.8vw;
+      width: 47.5vw;
     }
   }
   &__description {
@@ -68,8 +71,11 @@
     height: 11.25rem;
     border-radius: 0.25rem;
     border: 1px solid #afafaf;
+    @include tablet {
+      width: 92.8vw;
+    }
     @include desktop {
-      width: 42.8vw;
+      width: 47.5vw;
       height: 78px;
     }
   }
@@ -80,9 +86,10 @@
       flex-direction: row;
       justify-content: flex-end;
       margin: 0 7.682vw;
-      @include desktop {
-        width: 49.75rem;
-      }
+      width: 85.9vw;
+    }
+    @include desktop {
+      width: 53.39rem;
     }
   }
   &__cancel-button {
