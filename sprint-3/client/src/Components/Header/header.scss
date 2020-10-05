@@ -2,6 +2,7 @@
 @import "../../styles/partials/mediaQuery";
 
 .nav {
+  font-family: "Avenir";
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,6 +47,7 @@
     }
   }
   &__search {
+    font-family: "Avenir";
     width: 90vw;
     height: 2.8125rem;
     border: 1px solid #afafaf;

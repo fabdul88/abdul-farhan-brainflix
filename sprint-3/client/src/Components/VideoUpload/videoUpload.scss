@@ -2,7 +2,7 @@
 @import "../../styles/partials/fonts";
 
 .upload-video-container {
-  font-family: Avenir;
+  font-family: "Avenir";
   color: #323232;
   margin: 1rem;
   @include tablet {
@@ -48,6 +48,7 @@
     }
   }
   &__text {
+    font-family: "Avenir";
     width: 88vw;
     height: 3.125rem;
     border-radius: 0.25rem;
@@ -67,6 +68,7 @@
     }
   }
   &__textbox {
+    font-family: "Avenir";
     width: 88vw;
     height: 11.25rem;
     border-radius: 0.25rem;
@@ -93,6 +95,7 @@
     }
   }
   &__cancel-button {
+    font-family: "Avenir";
     margin: 1.5rem 0 0 0;
     width: 90vw;
     height: 3.125rem;
@@ -108,6 +111,7 @@
     }
   }
   &__publish-button {
+    font-family: "Avenir";
     margin: 32px 0 0 0;
     width: 90vw;
     height: 3.125rem;
