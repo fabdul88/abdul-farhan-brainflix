@@ -3,6 +3,21 @@ import Views from "../../assets/Icons/SVG/Icon-views.svg";
 import Likes from "../../assets/Icons/SVG/Icon-likes.svg";
 class VideoInfo extends React.Component {
   render() {
+    const getDateString = (timestamp) => {
+      const plus0 = (num) => `0${num.toString()}`.slice(-2);
+
+      const d = new Date(timestamp);
+
+      const year = d.getFullYear();
+      const monthTmp = d.getMonth() + 1;
+      const month = plus0(monthTmp);
+      const date = plus0(d.getDate());
+      // const hour = plus0(d.getHours());
+      // const minute = plus0(d.getMinutes());
+      // const second = plus0(d.getSeconds());
+
+      return `${year}-${month}-${date}`;
+    };
     return (
       <div className="video-container__info-container">
         <h1 className="video-container__heading">{this.props.item.title}</h1>
@@ -12,7 +27,7 @@ class VideoInfo extends React.Component {
               {this.props.item.channel}
             </h2>
             <p className="video-container__author-date">
-              {this.props.item.timestamp}
+              {getDateString(this.props.item.timestamp)}
             </p>
           </div>
           <div className="video-container__views-likes-container">

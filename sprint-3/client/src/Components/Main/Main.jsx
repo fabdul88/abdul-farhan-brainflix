@@ -72,7 +72,7 @@ class Main extends React.Component {
                   <Comments
                     key={item.id}
                     name={item.name}
-                    date={item.timestamp}
+                    timestamp={item.timestamp}
                     comment={item.comment}
                   />
                 );
